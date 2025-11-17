@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Drawing Canvas</title>
+    <link rel="stylesheet" href="/Users/atisha/Documents/pixel-drawing-canvas/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel">
+        <header class="panel__header">
+          <h1>Pixel Canvas</h1>
+          <p>Draw tiny art with customizable colors and grid size.</p>
+        </header>
+        <div class="controls">
+          <div class="control control--color">
+            <label for="color-picker">Color</label>
+            <input type="color" id="color-picker" value="#ff6b6b" />
+          </div>
+          <div class="control control--modes">
+            <button id="draw-mode" class="mode-button is-active" type="button">
+              Draw
+            </button>
+            <button id="erase-mode" class="mode-button" type="button">
+              Erase
+            </button>
+          </div>
+          <div class="control control--slider">
+            <label for="grid-size">Grid Size</label>
+            <div class="slider-row">
+              <input
+                type="range"
+                id="grid-size"
+                min="8"
+                max="64"
+                value="32"
+              />
+              <span id="grid-size-label">32 × 32</span>
+            </div>
+          </div>
+          <div class="control control--toggles">
+            <button id="toggle-grid" type="button">Hide Grid</button>
+            <button id="clear-grid" type="button">Clear</button>
+          </div>
+        </div>
+      </section>
+      <section class="canvas-wrapper">
+        <div id="grid" class="grid"></div>
+      </section>
+    </main>
+    <script src="/Users/atisha/Documents/pixel-drawing-canvas/script.js"></script>
+  </body>
+</html>
+
